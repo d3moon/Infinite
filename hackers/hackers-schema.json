@@ -1,0 +1,42 @@
+{
+  "$id": "hackers",
+  "description": "Esquema para registro de operações para os hackers",
+  "type": "object",
+  "required": [
+    
+  ],
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "title": "Email address",
+      "type": "string",
+      "pattern": "^\\S+@\\S+\\.\\S+$",
+      "format": "email",
+      "minLength": 6,
+      "maxLength": 127
+    },
+    "password": {
+       "type": "string",
+       "format": "password"
+    },
+    "paypal": {
+      "type": "string"
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "offers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+
+  },
+  "additionalProperties": false
+}
